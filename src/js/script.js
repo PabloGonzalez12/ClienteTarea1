@@ -72,6 +72,9 @@ function start(){
         if (seconds < 0) {
             clearInterval(count);
             timeElement.innerHTML = "Contador acabado";
+            divElement.classList.remove("green");
+            divElement.classList.remove("red");
+            divElement.classList.remove("orange");
         }
     }, 1000);
 }
