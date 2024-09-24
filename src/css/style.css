@@ -1,0 +1,31 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    gap: 2vh;
+    background-color: aquamarine;
+}
+
+.head{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.container{
+    padding: 5vw;
+    border-radius: 2vw;
+}
+
+.green{
+    background-color: rgb(50, 243, 50) !important;
+}
+
+.red {
+    background-color: rgb(242, 34, 34);
+}
+
+.orange{
+    background-color: rgb(255, 166, 0);
+}
