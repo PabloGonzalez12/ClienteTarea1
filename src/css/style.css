@@ -16,6 +16,7 @@ body{
 .container{
     padding: 5vw;
     border-radius: 2vw;
+    font-size: 3vw;
 }
 
 .green{

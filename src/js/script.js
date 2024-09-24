@@ -39,37 +39,41 @@ inputElement.addEventListener("change", function() {
         divElement.classList.remove("red");
         divElement.classList.remove("orange");
 
-        count();
+        start();
     }
 });
 
 
 
 
-var count = setInterval(function() {
-    var now = new Date().getTime();
-    var distance = countDown - now;
-        
-    var months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30.44));
-    var days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    timeElement.innerHTML = months + "m " + days + "d " + hours + "h " 
-    + minutes + "m " + seconds + "s ";
-
+function start(){
+    var count = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDown - now;
+            
+        var months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30.44));
+        var days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-    if (days < 7 && months == 0){
-        divElement.classList.add("red");
-    } else if (days < 14 && months == 0){
-        divElement.classList.add("orange");
-    } else {
-        divElement.classList.add("green");
-    }
+        timeElement.innerHTML = months + "m " + days + "d " + hours + "h " 
+        + minutes + "m " + seconds + "s ";
+    
         
-    if (seconds < 0) {
-        clearInterval(count);
-        timeElement.innerHTML = "Contador acabado";
-    }
-}, 1000);
+        if (days < 7 && months == 0){
+            divElement.classList.add("red");
+        } else if (days < 14 && months == 0){
+            divElement.classList.add("orange");
+        } else {
+            divElement.classList.add("green");
+        }
+            
+        if (seconds < 0) {
+            clearInterval(count);
+            timeElement.innerHTML = "Contador acabado";
+        }
+    }, 1000);
+}
+
+start();
