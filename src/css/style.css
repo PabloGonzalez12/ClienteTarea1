@@ -5,18 +5,37 @@ body{
     height: 100vh;
     flex-direction: column;
     gap: 2vh;
-    background-color: aquamarine;
+    background-image: url(https://i.pinimg.com/originals/ec/a1/13/eca113d23258ad816c3d16c377b3b50d.jpg);
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    overflow: hidden;
+}
+
+.background{
+    background-image: url(https://th.bing.com/th/id/OIG2._VT4iiIr..kLkUCVEbbm?pid=ImgGnhttps://th.bing.com/th/id/OIG3.v4MrBmIoDiXdiCCQiWgC?pid=ImgGn);
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    overflow: hidden;
+    background: linear-gradient(to bottom, #000dfc, #43fff2)
+}
+
+.text-red{
+    color: rgb(255, 0, 0);
 }
 
 .head{
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 4vw;
 }
 
 .container{
-    padding: 5vw;
+    padding: 3vw;
     border-radius: 2vw;
-    font-size: 3vw;
+    font-size: 2.5vw;
 }
 
 .green{
@@ -29,4 +48,11 @@ body{
 
 .orange{
     background-color: rgb(255, 166, 0);
+}
+
+
+.input-size{
+    width: 15vw;
+    height: 15vh;
+    font-size: 2vw;
 }

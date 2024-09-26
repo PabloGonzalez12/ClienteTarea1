@@ -10,6 +10,7 @@ bodyElement.appendChild(divElement);
 divElement.appendChild(timeElement);
 
 inputElement.setAttribute("type", "date");
+inputElement.classList.add("input-size");
 bodyElement.appendChild(inputElement);
 
 headElement.classList.add("head");
@@ -33,8 +34,11 @@ inputElement.addEventListener("change", function() {
     let selectedDate = inputElement.value;
     if (selectedDate) {
         countDown = new Date(selectedDate).getTime();
+        bodyElement.classList.remove("background");
+        bodyElement.classList.add("background");
 
         headElement.innerHTML = "¡¡ Tiempo restante !!";
+        headElement.classList.add("text-color");
         divElement.classList.remove("green");
         divElement.classList.remove("red");
         divElement.classList.remove("orange");
