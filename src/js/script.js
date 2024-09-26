@@ -5,7 +5,7 @@ const inputElement = document.createElement("input");
 
 const bodyElement = document.getElementById("body");
 bodyElement.appendChild(headElement);
-headElement.innerHTML = "Tiempo restante hasta las vacaciones de Navidad";
+headElement.innerHTML = "Time remaining until the Christmas holidays";
 bodyElement.appendChild(divElement);
 divElement.appendChild(timeElement);
 
@@ -37,7 +37,7 @@ inputElement.addEventListener("change", function() {
         bodyElement.classList.remove("background");
         bodyElement.classList.add("background");
 
-        headElement.innerHTML = "¡¡ Tiempo restante !!";
+        headElement.innerHTML = "¡¡ Time Remaining !!";
         headElement.classList.add("text-color");
         divElement.classList.remove("green");
         divElement.classList.remove("red");
@@ -75,7 +75,7 @@ function start(){
             
         if (seconds < 0) {
             clearInterval(count);
-            timeElement.innerHTML = "Contador acabado";
+            timeElement.innerHTML = "Finished counter";
             divElement.classList.remove("green");
             divElement.classList.remove("red");
             divElement.classList.remove("orange");
